@@ -1,11 +1,55 @@
 //<МИКСИНЫ>==============================================================================================================
-@mixin rotate($deg){-moz-transform: rotate($deg);-ms-transform: rotate($deg);-webkit-transform: rotate($deg);-o-transform: rotate($deg);transform: rotate($deg);}
-@mixin scale($num){-moz-transform: scale($num);-ms-transform: scale($num);-webkit-transform: scale($num);-o-transform: scale($num);transform: scale($num);}
-@mixin skew($deg){-moz-transform: skew($deg);-ms-transform: skew($deg);-webkit-transform: skew($deg);-o-transform: skew($deg);transform: skew($deg);}
-@mixin tr($x, $y, $z){transform: translate3d($x, $y, $z);}
-@mixin flexbox(){display:-webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
-@mixin flexboxinline(){display:-webkit-inline-flex;display: -moz-inline-flex;display: -ms-inline-flex;display: -o-inline-flex;display: inline-flex;}
-@mixin flexorder($val){-webkit-box-ordinal-group: $val;-moz-box-ordinal-group: $val;-ms-flex-order: $val;-webkit-order: $val;order: $val;}
+@mixin rotate($deg) {
+    -moz-transform: rotate($deg);
+    -ms-transform: rotate($deg);
+    -webkit-transform: rotate($deg);
+    -o-transform: rotate($deg);
+    transform: rotate($deg);
+}
+
+@mixin scale($num) {
+    -moz-transform: scale($num);
+    -ms-transform: scale($num);
+    -webkit-transform: scale($num);
+    -o-transform: scale($num);
+    transform: scale($num);
+}
+
+@mixin skew($deg) {
+    -moz-transform: skew($deg);
+    -ms-transform: skew($deg);
+    -webkit-transform: skew($deg);
+    -o-transform: skew($deg);
+    transform: skew($deg);
+}
+
+@mixin tr($x, $y, $z) {
+    transform: translate3d($x, $y, $z);
+}
+
+@mixin flexbox() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin flexboxinline() {
+    display: -webkit-inline-flex;
+    display: -moz-inline-flex;
+    display: -ms-inline-flex;
+    display: -o-inline-flex;
+    display: inline-flex;
+}
+
+@mixin flexorder($val) {
+    -webkit-box-ordinal-group: $val;
+    -moz-box-ordinal-group: $val;
+    -ms-flex-order: $val;
+    -webkit-order: $val;
+    order: $val;
+}
 
 //<ДЕЛАЕТ АДАПТИВНЫЙ ШРИФТ>==============================================================================================
 @mixin adaptive-font($pcSize, $mobSize) {
@@ -20,6 +64,7 @@
         font-size: calc(#{$mobSize + px} + #{$addSize} *(100vw / #{$containerWidth}));
     }
 }
+
 //</ДЕЛАЕТ АДАПТИВНЫЙ ШРИФТ>=============================================================================================
 //</МИКСИНЫ>=============================================================================================================
 
@@ -29,9 +74,9 @@
 
 
 //<ПЕРЕМЕННИЕ>===========================================================================================================
-$containerWidth:1280px; //Максимальная шырина контейнера(начальная)
-$minwidth:320px;
-$mv:1177;
+$containerWidth:1110; //Максимальная шырина контейнера(начальная)
+$minwidth:320;
+$mv:1110;
 $md1:$mv+12;
 $md2:992.98;
 $md3:767.98;
@@ -43,7 +88,12 @@ $md4:479.98;
 //</ОБНУЛЕНИЯ, ОБЩИЕ ПАРАМЕТРЫ>==========================================================================================
 
 //<ОБОЛОЧКА>=============================================================================================================
-.wrapper{width: 100%;min-height: 100%;overflow: hidden;}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
 //</ОБОЛОЧКА>============================================================================================================
 
 //<ОСНОВНАЯ СЕТКА>=======================================================================================================
@@ -51,10 +101,21 @@ $md4:479.98;
     max-width: $mv+px;
     margin: 0 auto;
     width: 100%;
-    @media (max-width: $md1+px){max-width: 970px;}
-    @media (max-width: $md2+px){max-width: 750px;}
-    @media (max-width: $md3+px){max-width: none;padding: 0 10px;}
+
+    @media (max-width: $md1+px) {
+        max-width: 970px;
+    }
+
+    @media (max-width: $md2+px) {
+        max-width: 750px;
+    }
+
+    @media (max-width: $md3+px) {
+        max-width: none;
+        padding: 0 10px;
+    }
 }
+
 //</ОСНОВНАЯ СЕТКА>======================================================================================================
 
 //<ПОДКЛЮЧЕНИЯ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЕЛМЕНТОВ>=========================================================================
@@ -73,12 +134,3 @@ $md4:479.98;
 
 
 //</ОСНОВНОЙ БЛОК>=======================================================================================================
-
-
-
-
-
-
-
-
-
