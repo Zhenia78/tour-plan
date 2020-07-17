@@ -20,8 +20,34 @@
     &__search, &__user, &-bottom
       display: none
 
+  .breadcrumb
+    &-list
+      &__item
+        font-size: 10px
+        line-height: 13px
+
   .burger
     display: flex
+
+  .hotel
+    padding: 5px 0 20px 0
+    &-info
+      &__text
+        flex-basis: 100%
+      &__wrapper
+        justify-content: space-between
+      &__name
+        margin: 10px 0 0 0
+        flex-basis: 100%
+      &__rating
+        display: none
+      &__offer
+        order: -2
+
+  .stars
+    flex-basis: auto
+
+
 
 @media (max-width: 560px)
   .logo__img
