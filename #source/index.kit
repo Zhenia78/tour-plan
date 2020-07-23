@@ -12,7 +12,7 @@
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link
-    href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;600;700;900&family=Nunito:wght@400;600;800&display=swap"
     rel="stylesheet">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=a96f3f31-4422-42b5-9a95-e60570ab77b4&lang=ru_RU"
     type="text/javascript">
@@ -35,7 +35,7 @@
     </nav>
     <!-- /.breadcrumbs -->
 
-    <div class="hotel">
+    <section class="hotel">
       <div class="container">
         <div class="hotel-info">
           <div class="hotel-info__text">
@@ -62,21 +62,21 @@
         <div class="hotel-grid">
           <!-- Slider main container -->
 
-          <div class="swiper hotel__swiper">
-            <div class="swiper-container">
+          <div class="hotel-swiper">
+            <div class="swiper-container hotel-swiper__container">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <div class="swiper-slide"><img src="img/slide-1.png" alt="slide" class="swiper-slide__image"></div>
-                <div class="swiper-slide"><img src="img/slide-2.jpg" alt="slide" class="swiper-slide__image"></div>
-                <div class="swiper-slide"><img src="img/slide-3.jpg" alt="slide" class="swiper-slide__image"></div>
-                <div class="swiper-slide"><img src="img/slide-4.jpg" alt="slide" class="swiper-slide__image"></div>
-                <div class="swiper-slide"><img src="img/slide-5.jpg" alt="slide" class="swiper-slide__image"></div>
-                <div class="swiper-slide"><img src="img/slide-6.jpg" alt="slide" class="swiper-slide__image"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-1.png" alt="slide"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-2.jpg" alt="slide"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-3.jpg" alt="slide"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-4.jpg" alt="slide"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-5.jpg" alt="slide"></div>
+                <div class="swiper-slide hotel-swiper__slide"><img src="img/slide-6.jpg" alt="slide"></div>
               </div>
               <!-- If we need navigation buttons -->
-              <button class="swiper__button swiper__button_prev"></button>
-              <button class="swiper__button swiper__button_next"></button>
+              <button class="hotel-swiper__button hotel-swiper__button_prev"></button>
+              <button class="hotel-swiper__button hotel-swiper__button_next"></button>
             </div>
             <!-- /.swiper-container -->
           </div>
@@ -113,8 +113,118 @@
         <!-- /.hotel-grid -->
       </div>
       <!-- /.container -->
-    </div>
+    </section>
     <!-- /.hotel -->
+
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter__wrapper">
+          <h2 class="newsletter__title">
+            subscribe to our
+            <span class="newsletter__strong">Newsletter</span>
+          </h2>
+
+          <form action="#" class="subscribe">
+            <input type="email" class="subscribe__input" placeholder="Your email address">
+            <button class="button subscribe__button">Send</button>
+            <form>
+        </div>
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.newsletter -->
+
+    <section class="reviews">
+      <div class="container">
+        <h2 class="reviews__title">What people thinks about us</h2>
+
+        <div class="swiper-container reviews-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="reviews-swiper-item reviews-swiper__item">
+                <div class="profile reviews-swiper-item__profile">
+                  <div class="profile__avatar">
+                    <img src="img/reviews-photo-1.jpg" alt="Megan's photo">
+                  </div>
+                  <h3 class="profile__username">Megan Fox</h3>
+                  <span class="profile__date">Stayed 18 Nov, 2019</span>
+                  <div class="reviews-swiper-item__rating">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                  </div>
+                </div>
+                <!-- /.reviews-swiper__profile -->
+                <p class="reviews-swiper-item__text">
+                  It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very
+                  well. Issue was only that Lift was not in working and we were allotted to 3rd floor and amenities
+                  articles were in corner of gallery which were giving bad feeling. Breakfast was good and support of
+                  the staff was also very nice. Location is not good as per atmosphere, it is very nearby most of the
+                  popular places but self location in a narrow street is not good. Overall it was a good experience and
+                  could recommend.
+                </p>
+              </div>
+              <!-- /.reviews-swiper__item -->
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews-swiper-item reviews-swiper__item">
+                <div class="profile reviews-swiper-item__profile">
+                  <div class="profile__avatar">
+                    <img src="img/reviews-photo-2.jpg" alt="Megan's photo">
+                  </div>
+                  <h3 class="profile__username">Peter Falkon</h3>
+                  <span class="profile__date">Stayed 23 Dec, 2018</span>
+                  <div class="reviews-swiper-item__rating">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                  </div>
+                </div>
+                <!-- /.reviews-swiper__profile -->
+                <p class="reviews-swiper-item__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic vel ipsum voluptatem dolor animi nisi eum quae, vitae repellendus deserunt quos facilis nulla debitis nobis aliquid ut dolorum, nemo quaerat non eaque ullam reprehenderit odio provident. Nesciunt suscipit tempore vitae! Accusantium assumenda iusto dolor vitae eaque quisquam repudiandae dicta. Possimus?
+                </p>
+              </div>
+              <!-- /.reviews-swiper__item -->
+            </div>
+            <div class="swiper-slide">
+              <div class="reviews-swiper-item reviews-swiper__item">
+                <div class="profile reviews-swiper-item__profile">
+                  <div class="profile__avatar">
+                    <img src="img/reviews-photo-3.jpg" alt="Megan's photo">
+                  </div>
+                  <h3 class="profile__username">Jessica Jhonson</h3>
+                  <span class="profile__date">Stayed 10 May, 2017</span>
+                  <div class="reviews-swiper-item__rating">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                    <img src="img/icons/star.svg" alt="star" class="star">
+                  </div>
+                </div>
+                <!-- /.reviews-swiper__profile -->
+                <p class="reviews-swiper-item__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe neque maxime ipsam dicta voluptatum. Excepturi ipsa autem perspiciatis! Ab consequatur nihil, possimus voluptates illum, voluptate alias molestias eveniet distinctio facilis temporibus odit reiciendis ipsum minus ea excepturi et fugit doloribus, provident labore dolor quo a. Nesciunt consectetur ad voluptate porro numquam, quos vel laudantium atque tenetur, placeat illo facilis dignissimos! Ipsam quis quos minus. Ipsam voluptas voluptatem iure recusandae magnam.
+                </p>
+              </div>
+              <!-- /.reviews-swiper__item -->
+            </div>
+            <!-- /.swiper-slide -->
+          </div>
+          <!-- /.swiper-wrapper -->
+          <button class="reviews-swiper__button reviews-swiper__button_prev"></button>
+          <button class="reviews-swiper__button reviews-swiper__button_next"></button>
+        </div>
+        <!-- /.swiper-container -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.reviews -->
 
     <!-- @import: "_footer.html" -->
   </div>

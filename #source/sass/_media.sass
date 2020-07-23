@@ -1,6 +1,7 @@
 @media (max-width: 1140px)
-  .swiper
-    max-width: 590px
+  .hotel
+    &-swiper
+      max-width: 590px
   
 @media (max-width: 992px)
   .navbar
@@ -26,17 +27,21 @@
       flex-direction: row
       justify-content: space-between
       width: 100%
-    &__swiper
-      margin: 0 0 30px 0
+    &-swiper
+      margin: 0 0 30px 0 
+      max-width: 100%
 
-  .swiper
-    max-width: 100%
 
   .booking
     width: 340px
 
   .map
     width: 340px
+  
+  .newsletter
+    padding: 92px 0 
+    &__wrapper
+      justify-content: space-between
 
 @media (max-width: 768px) 
   .navbar
@@ -66,7 +71,7 @@
         display: none
       &__offer
         @include flexorder(-2)
-    &__swiper
+    &-swiper
       margin: 0 0 30px 0
     &__cards
       flex-direction: column
@@ -82,6 +87,20 @@
   .stars
     flex-basis: auto
 
+  .newsletter
+    padding: 76px 0 83px 0
+    &__title
+      margin: 0 0 37px 0
+      font-size: 20px
+      line-height: 25px
+    &__strong
+      font-size: 30px
+      line-height: 38px
+    &__wrapper
+      flex-direction: column
+      align-items: flex-start
+      justify-content: space-between
+
 
 
 @media (max-width: 560px)
@@ -89,8 +108,11 @@
     width: 100px
 
   .hotel           
-    &__swiper
+    &-swiper
       margin: 0 0 20px 0
     &-info
       padding: 0 0 38px 0
+    
+  .subscribe
+    width: 100%
 
