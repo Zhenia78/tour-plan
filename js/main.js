@@ -50,3 +50,7 @@ function init() {
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myGeoObject);
 }
+
+$('.newsletter').parallax({
+    imageSrc: '../img/newsletter-bg.jpg'
+});
