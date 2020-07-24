@@ -1,0 +1,55 @@
+.activities
+  padding: 60px 0 98px 0
+  &-wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__title
+    margin: 0 0 57px 0        
+    font-weight: bold
+    font-size: 24px
+    line-height: 30px
+    text-transform: uppercase
+    color: $black
+
+.card
+  position: relative
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  width: 255px 
+  height: 255px
+  padding: 24px 26px
+  border-radius: 6px
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%)
+  background-size: 100% 100%
+  background-repeat: no-repeat
+  background-position: bottom
+  overflow: hidden
+  &__image
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: -2
+    width: 100%
+    height: 100%
+    object-fit: cover
+  &__title
+    margin-top: auto
+    margin-bottom: 18px
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px
+    color: $light
+  &__button
+    padding: 7px 22px
+    font-family: Nunito, sans-serif
+    font-style: normal
+    font-weight: 600
+    font-size: 12px
+    line-height: 16px
+    color: $light
+    background: $primary
+    border-radius: 4px
