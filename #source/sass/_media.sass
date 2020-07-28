@@ -6,6 +6,12 @@
   .card
     width: 230px
     height: 230px
+
+  .packages
+    padding: 40px 0 50px 0
+    &-wrapper
+      grid-template: repeat(3, 500px) / repeat(2, 350px)
+      justify-content: center
   
 @media (max-width: 992px)
   .navbar
@@ -69,6 +75,10 @@
   .card
     height: 255px       
     width: 48.5%
+
+  .packages
+    &-wrapper
+      grid-template: repeat(3, 500px) / repeat(2, 330px)
 
 @media (max-width: 768px) 
   .navbar
@@ -168,6 +178,29 @@
   .card    
     width: 100%
 
+  .packages
+    &__heading
+      margin: 0 0 36px 0
+      font-size: 18px
+      line-height: 23px
+    &-wrapper
+      grid-template: repeat(5, 500px) / 1fr
+    &-current-card
+      flex-direction: column
+      grid-column: 1 / 2
+      &__description
+        padding: 30px 21px 25px 32px
+      &__stars
+        display: none
+      &__title
+        margin: 0 0 23px 0
+        font-weight: bold
+        font-size: 18px
+        line-height: 23px
+      &__person-room
+        margin: 0 0 24px 0
+      &__text
+        display: none
 
 
 
