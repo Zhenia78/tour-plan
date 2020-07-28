@@ -786,6 +786,11 @@ body {
 .newsletter {
   position: relative;
   padding: 98px 0 87px 0;
+  background-image: url(../img/newsletter-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
 }
 .newsletter::before {
@@ -1057,11 +1062,23 @@ body {
   grid-column: 1/3;
 }
 .packages-current-card {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
   overflow: hidden;
+}
+.packages-current-card__offer {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  background: #EC1F46;
+  border-radius: 0px 4px 4px 0px;
 }
 .packages-current-card__img {
   flex-basis: 50%;
@@ -1100,12 +1117,24 @@ body {
   margin: 0 0 37px 0;
 }
 .packages-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-radius: 8px;
   overflow: hidden;
+}
+.packages-card__offer {
+  position: absolute;
+  left: 0;
+  top: 26px;
+  padding: 4px 9px;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 10px;
+  background: #EC1F46;
+  border-radius: 0px 4px 4px 0px;
 }
 .packages-card__img {
   flex-basis: 50%;
