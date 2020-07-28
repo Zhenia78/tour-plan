@@ -1,11 +1,3 @@
-$('.newsletter').parallax({
-    imageSrc: 'img/newsletter-bg.jpg',
-    position: 'center',
-    speed: 0.7,
-    androidFix: false,
-    iosFix: false
-});
-
 var hotelSwiper = new Swiper('.hotel-swiper__container', {
     // Optional parameters
     loop: true,
