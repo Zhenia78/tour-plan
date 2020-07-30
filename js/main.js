@@ -1,3 +1,13 @@
+var burger = document.querySelector(".burger");
+var navbarNav = document.querySelector(".navbar__nav");
+
+burger.addEventListener("click", function () {
+    navbarNav.classList.toggle("navbar__nav_visible");
+    burger.classList.toggle("active");
+    document.body.classList.toggle("active");
+});
+
+
 var hotelSwiper = new Swiper('.hotel-swiper__container', {
     // Optional parameters
     loop: true,
