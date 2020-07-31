@@ -150,11 +150,10 @@
       &_mobile
         &_visible
           display: flex
-      &_mb
-        &_27
-          margin: 0 0 27px 0
-        &_39
-          margin: 0 0 39px 0
+      &:nth-child(1)
+        margin: 0 0 27px 0
+      &:nth-child(2)
+        margin: 0 0 39px 0
 
     &__list
       flex-wrap: wrap
@@ -395,4 +394,20 @@
       margin: 0 7px 0 0
     &__list
       margin: 0 0 10px 0
+
+  .modal
+    &__dialog
+      width: 370px
+      min-height: 487px
+      padding: 18px 40px
+
+@media (max-width: 415px)
+  .modal
+    &__dialog
+      width: 300px
+      min-height: 487px
+      padding: 18px 30px
+    &__button
+      margin: 0 0 10px 0
+
 
