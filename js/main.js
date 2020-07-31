@@ -32,6 +32,10 @@ $(document).ready(function () {
     modal.removeClass("modal__visible");
   }
 
+  $('.newsletter').parallax({
+    imageSrc: 'img/newsletter-bg.jpg',
+    speed: 0.4
+  });
 
 
   var hotelSwiper = new Swiper('.hotel-swiper__container', {
