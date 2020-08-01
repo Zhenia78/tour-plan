@@ -324,9 +324,9 @@
             <span class="newsletter__strong">Newsletter</span>
           </h2>
 
-          <form action="#" class="subscribe">
-            <input type="email" class="subscribe__input" placeholder="Your email address">
-            <button class="subscribe__button">Send</button>
+          <form action="send.php" method="POST" class="subscribe">
+            <input type="email" class="subscribe__input" placeholder="Your email address" name="email">
+            <button type="submit" class="subscribe__button">Send</button>
           </form>
         </div>
       </div>
@@ -604,11 +604,11 @@
           <img src="img/icons/close.svg" alt="Close">
         </a>
         <h3 class="modal__title">Booking</h3>
-        <form action="send.php" method="POST" class="form modal__form">
-          <input type="text" class="input modal__input" placeholder="Your Full Name*" name="name">
-          <input type="text" class="input modal__input" placeholder="Phone Number*" name="phone">
-          <input type="email" class="input modal__input" placeholder="Email*" name="email">
-          <textarea class="textarea modal__textarea" placeholder="Message" name="message"></textarea>
+        <form action="#" class="form modal__form">
+          <input type="text" class="input modal__input" placeholder="Your Full Name*">
+          <input type="text" class="input modal__input" placeholder="Phone Number*">
+          <input type="email" class="input modal__input" placeholder="Email*">
+          <textarea class="textarea modal__textarea" placeholder="Message"></textarea>
           <button class="button modal__button" type="submit">Send</button>
           <span class="modal__info">* Required Fields</span>
         </form>

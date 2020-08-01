@@ -8,14 +8,22 @@ require 'phpmailer/Exception.php';
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
+$email = $_POST['email'];
 
 // Формирование самого письма
-$title = "Новое обращения";
-$body = "
+$message_title = "Новое обращения";
+$message_body = "
 <h2>Новое обращения</h2>
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br><br>
 <b>Сообщение:</b><br>$message
+";
+
+// Формирование самого письма
+$news_title = "Новая подписка на новости";
+$news_body = "
+<h2>Новая подписка на новости</h2>
+<b>Email:</b> $email<br>
 ";
 
 // Настройки PHPMailer
@@ -24,7 +32,7 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
@@ -40,8 +48,13 @@ try {
 
 // Отправка сообщения
 $mail->isHTML(true);
-$mail->Subject = $title;
-$mail->Body = $body;    
+$mail->Subject = $message_title;
+$mail->Body = $message_body;  
+
+// Отправка сообщения
+$mail->isHTML(true);
+$mail->Subject = $news_title;
+$mail->Body = $news_body;    
 
 // Проверяем отравленность сообщения
 if ($mail->send()) {$result = "success";} 
@@ -53,4 +66,11 @@ else {$result = "error";}
 }
 
 // Отображение результата
-echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+if (isset($email)) {
+  header("Location: subscription.html");
+}
+
+if (isset($message) & isset($phone) & isset($name)) {
+  header("Location: thankyou.html");
+}
+
