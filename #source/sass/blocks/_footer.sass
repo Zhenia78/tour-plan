@@ -1,1 +1,106 @@
+.footer
+  padding: 108px 0 46px 0
+  background-color: $dark-blue
+  color: $light
+  &-wrapper
+    display: grid
+    grid-template-columns: repeat(4, minmax(min-content, 1fr))
+    grid-gap: 20px
+    grid-auto-rows: minmax(40px, min-content)
+    padding: 0 0 95px 0
+  &__logo
+    display: block
+    grid-row: span 2
+    align-self: center
+    width: 166px
+    color: inherit
+    overflow: hidden
+    &>img
+      max-width: 100%
+      width: 100%
+      object-fit: cover
+  &__title
+    margin: 0 0 20px 0
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    &_mb-3
+      margin: 0 0 34px 0
+  &__categories
+    grid-row: span 3
+  &__legal
+    justify-self: end
+  &__social
+    &-network
+      display: flex
+      align-items: flex-start
+      grid-row: 2 / 4
+      grid-column: 3 / 5
+    &-title
+      margin: 0 43px 0 0
+    &-links
+      display: flex
+      align-items: center
+      justify-content: space-between
+      min-width: 83px
+    
+  &__contact-details
+    grid-column: span 2
+  &__contacts-form
+    grid-column: span 2
+  &__icon
+    vertical-align: middle
+    &-wrapper
+      min-width: 40px
 
+  &__item
+    display: flex
+    align-items: flex-start
+    &_mb-2
+      margin: 0 0 20px 0
+    & a
+      color: inherit
+  &__item, &__text
+    font-weight: normal
+    font-size: 14px
+    line-height: 160%
+    color: #BDBDBD
+  &__text
+    margin: 0 0 22px 0
+  &__link
+    color: inherit
+  &__input 
+    flex-basis: 48%
+  &__textarea
+    margin: 0 0 22px 0
+
+  &__info
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: #E0E0E0
+
+.copyright
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 696px 
+  margin: 0 0 0 auto
+  &__list
+    display: flex
+  &__item:not(:last-child)
+    margin: 0 14px 0 0
+  &__link
+    font-weight: normal
+    font-size: 12px
+    line-height: 15px
+    color: #FFFFFF
+  &-group
+    display: flex
+    align-items: center
+    justify-content: space-around
+    height: 22px
+    min-width: 136px
+    width: min-content
+    background-color: #202539

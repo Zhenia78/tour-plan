@@ -156,10 +156,10 @@
     font-size: 12px
     line-height: 16px
     &>span
-      margin: 0 0 0 9px
-    &:first-child>span
       display: inline-block
-      margin: 0 0 8px 9px
+      margin: 0 0 0 9px
+    &:not(:last-child)
+      margin: 0 0 8px 0
 
 .call-center
   display: flex
