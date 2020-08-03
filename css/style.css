@@ -450,7 +450,7 @@ body.active {
 .input {
   height: 50px;
   padding: 0 23px;
-  margin: 0 0 15px 0;
+  margin: 15px 0 0 0;
 }
 
 .textarea {
@@ -476,9 +476,14 @@ body.active {
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
-  color: #FFFFFF;
+  color: #ffffff;
   background: #EC1F46;
   border-radius: 4px;
+}
+
+label.invalid {
+  color: #ffd207;
+  text-shadow: 2px 2px #000000;
 }
 
 .navbar {
@@ -681,10 +686,13 @@ body.active {
   color: inherit;
 }
 .footer__input {
+  width: 100%;
+}
+.footer__input-group {
   flex-basis: 48%;
 }
 .footer__textarea {
-  margin: 0 0 22px 0;
+  margin: 15px 0 24px 0;
 }
 .footer__info {
   font-weight: bold;
@@ -1420,7 +1428,7 @@ body.active {
   flex-basis: 100%;
 }
 .modal__textarea {
-  margin: 0 0 15px 0;
+  margin: 15px 0 15px 0;
 }
 .modal__info {
   font-weight: bold;
@@ -1565,7 +1573,7 @@ body.active {
     grid-row: 4;
     grid-column: 1/5;
   }
-  .footer__input {
+  .footer__input_group {
     flex-basis: 47%;
   }
 
@@ -1826,9 +1834,6 @@ body.active {
   .footer__contacts-form {
     grid-column: 1/6;
   }
-  .footer__input {
-    flex-basis: 47%;
-  }
 }
 @media (max-width: 768px) and (orientation: landscape) {
   .navbar__item:nth-child(3) {
@@ -1921,11 +1926,11 @@ body.active {
     grid-row: 7;
     grid-column: 1;
   }
-  .footer__input {
+  .footer__input-group {
     flex-basis: 100%;
   }
   .footer__textarea {
-    margin: 0 0 15px 0;
+    margin: 15px 0;
   }
   .footer__button {
     order: 1;

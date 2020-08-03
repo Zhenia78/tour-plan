@@ -37,6 +37,22 @@ $(document).ready(function () {
     speed: 0.4
   });
 
+  $(".form").each(function () {
+    $(this).validate({
+      errorClass: "invalid",
+      messages: {
+        name: "Please specify your name",
+        email: {
+          required: "We need your email address to contact you",
+          email: "Your email address must be in the format of name@domain.com"
+        },
+        phone: "Please specify your phone"
+      }
+    });
+  });
+
+  $('.phone-input').mask('+0(00) 0000-0000');
+
 
   var hotelSwiper = new Swiper('.hotel-swiper__container', {
     // Optional parameters
@@ -90,4 +106,5 @@ $(document).ready(function () {
     // Размещение геообъекта на карте.
     myMap.geoObjects.add(myGeoObject);
   }
+
 });

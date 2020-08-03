@@ -108,7 +108,8 @@
       grid-row: 4
       grid-column: 1 / 5
     &__input
-      flex-basis: 47%
+      &_group
+        flex-basis: 47%
 
   .copyright
     max-width: 100%                
@@ -313,8 +314,7 @@
       padding: 0 0 56px 0
     &__contacts-form
       grid-column: 1 / 6
-    &__input
-      flex-basis: 47%
+
 
 @media (max-width: 768px) and (orientation: landscape) 
   @for $i from 3 through 8
@@ -378,9 +378,10 @@
       grid-row: 7
       grid-column: 1
     &__input
-      flex-basis: 100%
+      &-group
+        flex-basis: 100%
     &__textarea
-      margin: 0 0 15px 0
+      margin: 15px 0
     &__button
       order: 1
     &__info
