@@ -689,6 +689,7 @@ label.invalid {
   width: 100%;
 }
 .footer__input-group {
+  align-self: flex-start;
   flex-basis: 48%;
 }
 .footer__textarea {
