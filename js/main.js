@@ -51,8 +51,19 @@ $(document).ready(function () {
     });
   });
 
+  $(".subscribe").validate({
+    errorClass: "invalid-email",
+    messages: {
+      email: {
+        required: "We need your email address to contact you",
+        email: "Invalid format"
+      }
+    }
+  });
+
   $('.phone-input').mask('+0(00) 0000-0000');
 
+  AOS.init();
 
   var hotelSwiper = new Swiper('.hotel-swiper__container', {
     // Optional parameters
@@ -86,25 +97,5 @@ $(document).ready(function () {
     },
   });
 
-  // Функция ymaps.ready() будет вызвана, когда
-  // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-  ymaps.ready(init);
-
-  function init() {
-    var myMap = new ymaps.Map("map", {
-      center: [25.78568392, -80.19079603],
-      zoom: 10
-    });
-    // Создание геообъекта с типом точка (метка).
-    var myGeoObject = new ymaps.GeoObject({
-      geometry: {
-        type: "Point", // тип геометрии - точка
-        coordinates: [25.78568392, -80.19079603] // координаты точки
-      }
-    });
-
-    // Размещение геообъекта на карте.
-    myMap.geoObjects.add(myGeoObject);
-  }
 
 });

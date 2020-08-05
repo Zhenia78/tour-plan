@@ -482,8 +482,23 @@ body.active {
 }
 
 label.invalid {
-  color: #ffd207;
-  text-shadow: 2px 2px #000000;
+  color: red;
+  font-size: 10px;
+}
+
+label.invalid-email {
+  position: relative;
+  top: 36px;
+  left: 33px;
+  z-index: 100;
+  color: red;
+  font-size: 10px;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .navbar {
@@ -628,7 +643,7 @@ label.invalid {
   text-transform: uppercase;
 }
 .footer__title_mb-3 {
-  margin: 0 0 34px 0;
+  margin: 0 0 19px 0;
 }
 .footer__categories {
   grid-row: span 3;
@@ -742,7 +757,7 @@ label.invalid {
 .breadcrumb-list__item {
   font-family: Muli, sans-serif;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 10px;
   line-height: 13px;
 }
 .breadcrumb-list__item:not(:last-child)::after {
@@ -833,11 +848,11 @@ label.invalid {
 }
 .hotel-swiper__button_next {
   right: 18px;
-  background: url("../img/arrow-next.svg") no-repeat center;
+  background: url("../img/icons/arrow-next.svg") no-repeat center;
 }
 .hotel-swiper__button_prev {
   left: 18px;
-  background: url("../img/arrow-prev.svg") no-repeat center;
+  background: url("../img/icons/arrow-prev.svg") no-repeat center;
 }
 
 .stars {
@@ -900,6 +915,7 @@ label.invalid {
 .booking__button {
   width: 100%;
   min-height: 45px;
+  padding: 0 18px;
   color: #ffffff;
   font-weight: 600;
   font-size: 14px;
@@ -1190,11 +1206,21 @@ label.invalid {
   height: 255px;
   padding: 24px 26px;
   border-radius: 6px;
-  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: bottom;
   overflow: hidden;
+}
+.card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%);
+  background-position: bottom;
+  background-size: 100% 100%;
+  background-repeat: repeatX;
 }
 .card__image {
   position: absolute;
@@ -1202,7 +1228,7 @@ label.invalid {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -2;
+  z-index: -4;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1284,6 +1310,7 @@ label.invalid {
   height: 100%;
   width: 100%;
   background: #0A223D;
+  overflow: auto;
 }
 .packages-current-card__stars {
   margin: 0 0 5px 0;
