@@ -4,15 +4,20 @@ $(document).ready(function () {
   const modalButton = $("[data-toggle=modal]");
   const closeButton = $(".modal__close");
   const modalOverlay = $(".modal__overlay");
+  const windowWidth = $(window).width();
 
   burger.on("click", function () {
     navbarNav.toggleClass("navbar__nav_visible");
     burger.toggleClass("active");
-    document.body.toggleClass("active");
+    $(".body").toggleClass("active");
   });
 
 
-  modalButton.on("click", modalOpen);
+  modalButton.on("click", function () {
+    var targetModal = $(this).attr("data-href");
+    $(targetModal).addClass("modal__visible");
+    $(".body").toggleClass("active");
+  });
   closeButton.on("click", modalClose);
   modalOverlay.on("click", modalClose);
   $(document).keyup(function (e) {
@@ -21,15 +26,12 @@ $(document).ready(function () {
     }
   });
 
-  function modalOpen() {
-    var targetModal = $(this).attr("data-href");
-    $(targetModal).addClass("modal__visible");
-  }
 
   function modalClose(event) {
     event.preventDefault();
     var modal = $(".modal");
     modal.removeClass("modal__visible");
+    $(".body").removeClass("active");
   }
 
   $('.newsletter').parallax({
@@ -62,6 +64,9 @@ $(document).ready(function () {
   });
 
   $('.phone-input').mask('+0(00) 0000-0000');
+
+
+
 
   AOS.init();
 
@@ -96,6 +101,41 @@ $(document).ready(function () {
       prevEl: '.reviews-swiper__button_prev',
     },
   });
+
+  if ($(window).width() >= "480") {
+    bigGoogleMap();
+  }
+
+  function bigGoogleMap() {
+    $(".map").hover(function () {
+        $(".map-iframe").attr({
+          "src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d75105.27815364326!2d-78.90883015362594!3d33.703366594221244!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7da9d3c5b6a52dd!2sOcean%2022%20by%20Hilton%20Grand%20Vacations!5e0!3m2!1suk!2sua!4v1596564053856!5m2!1suk!2sua",
+          "allowfullscreen": "",
+          "aria-hidden": "false",
+          "tabindex": "0"
+        });
+      },
+      function () {
+        $(".map-iframe").removeAttr("src", "allowfullscreen", "aria-hidden", "tabindex");
+      });
+  }
+
+  if ($(window).width() <= "480") {
+    smallGoogleMap();
+  }
+
+  function smallGoogleMap() {
+    $(".map-iframe").attr({
+      "src": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d75105.27815364326!2d-78.90883015362594!3d33.703366594221244!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb7da9d3c5b6a52dd!2sOcean%2022%20by%20Hilton%20Grand%20Vacations!5e0!3m2!1suk!2sua!4v1596564053856!5m2!1suk!2sua",
+      "allowfullscreen": "",
+      "aria-hidden": "false",
+      "tabindex": "0"
+    });
+    $(".map").css({
+      "background-image": "none"
+    });
+  }
+
 
 
 });
