@@ -67,9 +67,6 @@ $(document).ready(function () {
 
 
 
-
-  AOS.init();
-
   var hotelSwiper = new Swiper('.hotel-swiper__container', {
     // Optional parameters
     loop: true,

@@ -26,12 +26,13 @@
       line-height: 15px
 
   .search
-    margin: 0
+    margin: 0 25px 0 0
 
   .logo__img
     width: 132px
 
   .hotel
+    padding: 13px 0 70px 0
     &-grid
       flex-wrap: wrap
     &__cards
@@ -54,9 +55,13 @@
     padding: 92px 0 
     &__wrapper
       justify-content: space-between
+    &__title
+      margin: 0
+  .subscribe
+    margin: 0
 
   .reviews
-    padding: 55px 0 60px 0
+    padding: 44px 0 60px 0
     &__title
       margin: 0 0 50px 0
       font-size: 30px
@@ -65,9 +70,17 @@
       &-item
         padding: 0 62px 30px 62px
         width: 579px
+        &__profile
+          margin: -45px 0 22px 0
+      &__button
+        top: 48%
+        &_prev
+          left: 0
+        &_next
+          right: 0
 
   .activities
-    padding: 60px 0 50px 0
+    padding: 57px 0 50px 0
     &-wrapper
       flex-wrap: wrap
     &__card
@@ -78,6 +91,7 @@
     width: 48.5%
 
   .packages
+    padding: 40px 0 80px 0
     &-wrapper
       grid-template: repeat(3, 500px) / repeat(2, 330px)
 
@@ -109,10 +123,17 @@
       grid-column: 1 / 5
     &__contacts-form
       grid-row: 4
-      grid-column: 1 / 5
+      grid-column: 1/6
+      width: 539px
     &__input
       &_group
         flex-basis: 47%
+      
+  .contact-details
+    &__item
+      margin: 0 0 5px 0
+    &__title
+      margin: 18px 0 22px 0
 
   .copyright
     max-width: 100%                
@@ -175,6 +196,9 @@
       overflow: auto
       &_visible
         top: 78px
+  .search
+    margin: 0
+
   .burger.active
     justify-content: center
     &>.burger__line
@@ -321,6 +345,7 @@
       padding: 0 0 56px 0
     &__contacts-form
       grid-column: 1 / 6
+      width: 100%
 
 
 @media (max-width: 768px) and (orientation: landscape) 
@@ -341,7 +366,8 @@
   .logo__img
     width: 100px
 
-  .hotel           
+  .hotel        
+    padding: 0 0 20px 0 
     &-swiper
       margin: 0 0 20px 0
     &-info
@@ -421,7 +447,7 @@
       min-height: 487px
       padding: 18px 40px
 
-@media (max-width: 515px) and (orientation: landscape) 
+@media (max-height: 515px) and (orientation: landscape) 
   .modal
     &__dialog
       min-height: 0
@@ -429,7 +455,6 @@
       overflow: auto
     &__form
       padding: 0 0 30px 0
-
 
 
 @media (max-width: 415px)
