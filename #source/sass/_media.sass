@@ -140,9 +140,11 @@
     margin: 0 0 0 0
 
 
-@media (max-width: 768px) 
+@media (max-width: 767px) 
   body
     padding: 78px 0 0 0
+  button
+    outline: none
   .burger
     display: flex
 
@@ -348,7 +350,7 @@
       width: 100%
 
 
-@media (max-width: 768px) and (orientation: landscape) 
+@media (max-width: 767px) and (orientation: landscape) 
   @for $i from 3 through 8
     .navbar__item:nth-child(#{$i})
       width: 50%
