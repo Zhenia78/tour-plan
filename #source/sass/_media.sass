@@ -295,11 +295,11 @@
         position: absolute
         top: 30px
         &_prev
-          left: 50%
+          left: 48%
           margin: 0 0 0 -85px
           transform: translateX(-50%)
         &_next
-          right: 50%
+          right: 48%
           margin: 0 -85px 0 0
           transform: translateX(50%)
 
@@ -369,9 +369,12 @@
   .hotel        
     padding: 0 0 20px 0 
     &-swiper
+      height: 177px
       margin: 0 0 20px 0
     &-info
       padding: 0 0 38px 0
+      &__description
+        margin: 0
 
   .map
     background-image: url(../img/map-3.jpg)
@@ -386,7 +389,7 @@
     padding: 40px 0 20px 0
 
   .activities 
-    padding: 20px 0 48px 0
+    padding: 30px 0 48px 0
 
   .footer
     padding: 69px 0 21px 0
@@ -398,14 +401,18 @@
       &_mb-15
         margin: 0 0 15px 0
     &__logo
-      width: 104px
       grid-column: 1
+      width: 95px
+      margin: 0 0 9px 0
     &__social
       &-network
         flex-direction: column
         align-items: start
         grid-row: 2
         grid-column: 1
+      &-title
+        margin: 0 0 24px 0
+
     &__categories
       grid-column: 1
       grid-row: 5
@@ -422,6 +429,7 @@
     &__contacts-form
       grid-row: 7
       grid-column: 1
+      padding: 10px 0 0 0
     &__input
       &-group
         flex-basis: 100%
@@ -432,6 +440,16 @@
     &__info
       flex-basis: 100%
       margin: 0 0 15px 0
+
+  .contact-details
+    &__title
+      margin: 0 0 30px 0
+      line-height: 12px
+    &__item
+      margin: 0 0 20px 0
+    
+  .name-input
+    margin: 0
 
   .copyright
     flex-direction: column

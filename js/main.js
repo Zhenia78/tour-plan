@@ -6,6 +6,10 @@ $(document).ready(function () {
   const modalOverlay = $(".modal__overlay");
   const windowWidth = $(window).width();
 
+  document.addEventListener('touchstart', onTouchStart, {
+    passive: true
+  });
+
   burger.on("click", function () {
     navbarNav.toggleClass("navbar__nav_visible");
     burger.toggleClass("active");
